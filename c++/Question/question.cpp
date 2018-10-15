@@ -6,12 +6,12 @@ using namespace std;
 
 int main()
 {
-	string zm1="张敏";
-	string str="1234";
+	string zm1="张敏高兴z";
+	string str="12345";
 	string zm="zhangmin";
-	cout<<str.len()<<endl;
-	cout<<sizeof(str)<<endl;
-	cout<<sizeof(zm)<<endl;
+	cout<<zm1.size()<<endl;
+	cout<<str.size()<<endl;
+	cout<<zm.size()<<endl;
 	return 0;
 }
 
