@@ -30,7 +30,7 @@ int ReceiveMsg(int msgid,int mtype,char* buf)
 {
 	struct buffer _buf;
 	_buf.msgtype=mtype;
-	if(msgrcv(msgid,buf,sizeof(_buf.msgtext),mtype,0)<0)
+	if(msgrcv(msgid,(void*)&_buf,sizeof(_buf.msgtext),mtype,0)<0)
 	{
 		perror("msgrcv error!");
 		return -1;
@@ -44,7 +44,7 @@ int SendMsg(int msgid,int mtype,char* buf)
 	struct buffer _buf;
 	_buf.msgtype=mtype;
 	strcpy(buf,_buf.msgtext);
-	if(msgsnd(msgid,buf,sizeof(_buf.msgtext),0)<0)
+	if(msgsnd(msgid,(void*)&_buf,sizeof(_buf.msgtext),0)<0)
 	{
 		perror("msgsnd error!");
 		return -1;
