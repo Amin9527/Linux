@@ -23,7 +23,7 @@ int GetMsgQueue()
 
 int CreateMsgQueue()
 {
-	return ComMsgQueue(IPC_EXCL|IPC_CREAT|0777);
+	return ComMsgQueue(IPC_EXCL|IPC_CREAT|0666);
 }
 
 int ReceiveMsg(int msgid,int mtype,char* buf)
@@ -43,7 +43,7 @@ int SendMsg(int msgid,int mtype,char* buf)
 {
 	struct buffer _buf;
 	_buf.msgtype=mtype;
-	strcpy(buf,_buf.msgtext);
+	strcpy(_buf.msgtext,buf);
 	if(msgsnd(msgid,(void*)&_buf,sizeof(_buf.msgtext),0)<0)
 	{
 		perror("msgsnd error!");
@@ -52,7 +52,6 @@ int SendMsg(int msgid,int mtype,char* buf)
 	return 0;
 
 }
-
 
 
 

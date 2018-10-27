@@ -6,6 +6,7 @@ int main()
 	char buf[100];
 	while(1)
 	{
+        //buf[0]=0;
 		printf("please enter#");
 		fflush(stdout);
 		int r=read(0,buf,sizeof(buf));
@@ -14,7 +15,6 @@ int main()
 			buf[r-1]=0;
 			SendMsg(msgid,SEND_TYPE,buf);
 		}
-		printf("please wait~\n");
 		ReceiveMsg(msgid,RECEIVE_TYPE,buf);
 		printf("receive #%s\n",buf);
 	}

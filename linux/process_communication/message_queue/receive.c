@@ -6,7 +6,7 @@ int main()
 	char buf[100];
 	while(1)
 	{
-		printf("please wait~\n");
+        //buf[0]=0;
 		int rcv=ReceiveMsg(msgid,SEND_TYPE,buf);
 		if(rcv<0)
 		{
