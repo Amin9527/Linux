@@ -4,6 +4,24 @@
 #include<iostream>
 #include<stdio.h>
 using namespace std;
+
+
+int main()
+{
+    string str="zhangmin";
+    //cout<<"str.begin():"<<str.begin()<<endl;
+    //cout<<"str.end():"<<str.end()<<endl;
+    str.insert(str.end(),'g');
+    cout<<str<<endl;
+    str.insert(str.end(),'a');
+    cout<<str<<endl;
+    str.insert(str.begin(),'x');
+    cout<<str<<endl;
+    return 0;
+}
+
+//联合体，大端小端
+/*
 int main()
 {
     int m=0x1a00;
@@ -18,7 +36,7 @@ int main()
     printf("%d\n",un1.ch);
     return 0;
 }
-
+*/
 ///////////////////////////////////////////////////////////////
 
 //  %  与   /
