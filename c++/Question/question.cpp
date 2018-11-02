@@ -8,6 +8,16 @@ using namespace std;
 
 int main()
 {
+    //int arr[10]={0};
+    int arr1[10];
+    //int arr2[10]={1};
+    return 0;
+}
+
+///////////////////string类的部分调用借口
+/*
+int main()
+{
     string str="zhangmin";
     //cout<<"str.begin():"<<str.begin()<<endl;
     //cout<<"str.end():"<<str.end()<<endl;
@@ -19,8 +29,8 @@ int main()
     cout<<str<<endl;
     return 0;
 }
-
-//联合体，大端小端
+*/
+/////////////////////////////////联合体，大端小端
 /*
 int main()
 {
