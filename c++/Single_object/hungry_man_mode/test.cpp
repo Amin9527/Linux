@@ -19,7 +19,7 @@ class HungryMode
         HungryMode(int n=0):i(n){}
         HungryMode(const HungryMode&);
         HungryMode& operator=(const HungryMode&);
-        static HungryMode object;
+        static HungryMode object;  //在刚开始就建立对象
         int i;
 };
 
