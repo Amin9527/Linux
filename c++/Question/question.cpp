@@ -3,13 +3,14 @@
 #include<string>
 #include<iostream>
 #include<stdio.h>
+#include<string.h>
 using namespace std;
 
 class stu
 {
     public:
         stu(){}
-        stu(int n,char* st):i(n),str(st){}
+        stu(int n,char* st):i(n){strcpy(str,st);}
 
         void print()
         {
@@ -18,7 +19,7 @@ class stu
         }
     private:
         int i;
-        char* str;
+        char str[6];
 };
 
 int main()

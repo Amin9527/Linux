@@ -1,5 +1,32 @@
 #include<stdio.h>
 
+int main()
+{
+    char* st="abcd";
+    char str[6]="abcd";
+    char* st1;
+    st1=st;
+    printf("%s\n",st1);
+    return 0;
+}
+
+
+
+//----------------------------字符串指针和字符串数组
+/*
+void print(char st[])
+{
+    //st[1]='e';
+    printf("%s\n",st);
+}
+
+int main()
+{
+    //char* str="abcd";
+    print("abcd");
+    return 0;
+}
+*/
 //----------------------------------------
 /*
 #include<unistd.h>//函数sleep（）的头文件
