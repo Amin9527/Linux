@@ -5,16 +5,47 @@
 #include<stdio.h>
 using namespace std;
 
+class stu
+{
+    public:
+        stu(){}
+        stu(int n,char* st):i(n),str(st){}
+
+        void print()
+        {
+            cout<<i<<endl;
+            cout<<str<<endl;
+        }
+    private:
+        int i;
+        char* str;
+};
 
 int main()
 {
-    //int arr[10]={0};
-    int arr1[10];
-    //int arr2[10]={1};
+    stu s1(1,"abcd");
+    s1.print();
+    cout<<endl;
+    stu s2(s1);
+    s2.print();
+    cout<<endl;
+    stu s3=s1;
+    s3.print();
+    cout<<endl;
+    
     return 0;
 }
 
-///////////////////string类的部分调用借口
+///////////////////////数组的初始化
+//int main()
+//{
+//    //int arr[10]={0};
+//    int arr1[10];
+//    //int arr2[10]={1};
+//    return 0;
+//}
+
+///////////////////string类的部分调用接口
 /*
 int main()
 {
