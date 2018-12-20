@@ -1,0 +1,9 @@
+#include<stdio.h>
+
+int main()
+{
+	printf("Hello World!\n");
+	printf("Hello zhangmin!\n");
+	printf("hello gaoxing!\n");
+	return 0;
+}
